@@ -36,8 +36,8 @@ sub parseResponse()
           if xmlitem.getname() = "media:content"
             item.stream = {url : xmlitem.url}
             item.url = xmlitem.getattributes().url
-            item.streamformat = "mp4"
-
+           ' item.streamformat = "m4v"
+                item.streamformat = {url : xmlitem.streamformat}
             mediacontent = xmlitem.getchildelements()
             for each mediacontentitem in mediacontent
               if mediacontentitem.getname() = "media:thumbnail"
@@ -53,26 +53,56 @@ sub parseResponse()
     end if
   end for
 
-  'For the 3 rows before the "grid"
+  'For the 4 rows before the "grid"
   list = [
     {
         Title:"Big Hits"
         ContentList : result
     }
     {
-        Title:"Action"
+        Title:"Irish Catholic Churches"
         ContentList : result
     }
     {
-        Title:"Drama"
+        Title:"Radio Stations"
         ContentList : result
     }
+  
+     {
+        Title:"Spanish Language"
+        ContentList : result
+    }
+	
+	   {
+        Title:"Traffic Cams"
+        ContentList : result
+    }
+	
+	   {
+        Title:"Documentaries"
+        ContentList : result
+    }
+	
+	
+	 {
+        Title:"News"
+        ContentList : result
+    }
+	
+	
+	 {
+        Title:"Sports"
+        ContentList : result
+    }
+	
+	
   ]
 
   'Logic for creating a "row" vs. a "grid"
   contentAA = {}
   content = invalid
-  if num = 3
+'Below will turn the 9th url to a grid instead of a row 
+ if num = 9
     content = createGrid(result)
   else
     content = createRow(list, num)
@@ -115,7 +145,7 @@ function createGrid(list as object)
     if i = 0
       row.Title = "The Grid"
     end if
-    for j = i to i + 3
+    for j = i to i + 4
       if list[j] <> invalid
         item = createObject("RoSGNode","ContentNode")
         AddAndSetFields(item,list[j])

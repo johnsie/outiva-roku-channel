@@ -18,7 +18,7 @@ Function Init()
 
   ' create buttons
   result = []
-  for each button in ["Play", "Second button"]
+  for each button in ["Play", ""]
     result.push({title : button})
   end for
   m.buttons.content = ContentList2SimpleNode(result)

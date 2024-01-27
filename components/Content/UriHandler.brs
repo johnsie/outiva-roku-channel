@@ -18,7 +18,8 @@ sub init()
 
   ' fields for checking if content has been loaded
   ' each row is assumed to be a different request for a rss feed
-  m.top.numRows = 4
+'This is where the max number of rows on the home screen is defined
+  m.top.numRows = 8
   m.top.numRowsReceived = 0
   m.top.numBadRequests = 0
   m.top.contentSet = false

@@ -12,6 +12,7 @@
       color="0x000000"
       ShadeOpacity="0.8" />
 
+<!--I think this is where the rows types are defined-->
     <!-- The main content -->
     <RowList
 	    id="RowList"
@@ -20,12 +21,12 @@
       itemSize="[1920,220]"
       numRows="9"
       rowFocusAnimationStyle="FixedFocusWrap"
-      rowHeights="[800,300,615]"
-      rowItemSize="[[1600,700],[375,197],[375,526],[375,197]]"
+      rowHeights="[800,300,300,300,300,300]"
+      rowItemSize="[[1600,700],[375,197],[375,197],[375,197],[375,197],[375,197]]"
       rowItemSpacing="[[30,0]]"
       rowLabelOffset="[[165,8]]"
       showRowLabel="[false,true]"
-      showRowCounter="[true,true,true,false]"
+      showRowCounter="[true,true,true,true,true]"
       translation="[0,155]"/>
 
     <!-- For transition animation -->

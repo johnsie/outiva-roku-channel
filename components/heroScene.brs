@@ -17,6 +17,7 @@ sub init()
   m.FadeOut = m.top.findNode("FadeOut")
   ' Set focus to the scene
   m.top.setFocus(true)
+    m.top.signalBeacon("AppLaunchComplete")
 end sub
 
 ' Hero Grid Content handler fucntion. If content is set, stops the

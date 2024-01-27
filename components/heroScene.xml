@@ -13,8 +13,9 @@
 
     <!-- Overhang Node -->
     <Overhang
+	logoUri="https://steeky.com/home/roku-channel/overhang-logo.png"
       showClock="true"
-      title="Hero-Grid-Channel" />
+      title="Home" />
 
     <!-- Details screen with play button -->
     <DetailsScreen

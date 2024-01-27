@@ -5,12 +5,13 @@
 #
 
 # Channel Details
-title=OutivaRokuAPP
-subtitle=Outiva Roku App
+title=Outiva
+subtitle=TV and Radio
 major_version=1
 minor_version=4
 build_version=4
 
+supports_input_launch=1
 # Channel Assets
 mm_icon_focus_sd=pkg:/images/channel-poster_sd.png
 mm_icon_focus_hd=pkg:/images/channel-poster_hd.png

@@ -76,7 +76,7 @@
     <!-- Overhang Node (has to be rendered after others) -->
     <Overhang
       showClock="true"
-      title="Hero-Grid-Channel" />
+      title="Outiva" />
 
     <!-- Playback node -->
     <Video

@@ -17,10 +17,14 @@ sub Init()
   URLs = [
     ' Uncomment this line to simulate a bad request and make the dialog box appear
     ' "bad request",
-    "https://steeky.com/home/roku-channel/test.rss",
-    "https://steeky.com/home/roku-channel/test.rss",
-    "https://steeky.com/home/roku-channel/test.rss",
-    "https://steeky.com/home/roku-channel/test.rss"
+    "http://steeky.com/home/roku-channel/view.rss.php?hero=true",
+    "http://steeky.com/home/roku-channel/view.rss.php?genre=Catholic",
+    "http://steeky.com/home/roku-channel/view.rss.php?genre=Steeky",
+    "http://steeky.com/home/roku-channel/view.rss.php?genre=Honduras",
+	"http://steeky.com/home/roku-channel/view.rss.php?genre=Traffic",
+    "http://steeky.com/home/roku-channel/view.rss.php?genre=Documentaries"
+	 "http://steeky.com/home/roku-channel/view.rss.php?genre=News"
+	  "http://steeky.com/home/roku-channel/view.rss.php?genre=Sports"
   ]
   makeRequest(URLs,"Parser")
 
@@ -32,7 +36,7 @@ end sub
 ' Issues a URL request to the UriHandler component
 sub makeRequest(URLs as object, ParserComponent as String)
   'print "HeroScreen.brs - [makeRequest]"
-  for i = 0 to URLs.count() - 1
+  for i = 0 to URLs.count() -1
     context = createObject("roSGNode", "Node")
     uri = { uri: URLs[i] }
     if type(uri) = "roAssociativeArray"

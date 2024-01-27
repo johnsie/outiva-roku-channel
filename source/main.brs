@@ -39,7 +39,6 @@ sub showHeroScreen()
   screen.setMessagePort(m.port)
   scene = screen.CreateScene("HeroScene")
   screen.show()
-
   while(true)
     msg = wait(0, m.port)
     msgType = type(msg)
